@@ -1,0 +1,38 @@
+<!-- Q27. Save User Data in LocalStorage 
+Create a form that accepts: 
+ Name 
+ Email 
+ Phone Number 
+Save the submitted information in LocalStorage as JSON data. Retrieve and display the 
+saved information. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q27</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      let container = document.getElementById("container");
+
+      let data = {
+        name: "Satyaki",
+        email: "abc@gmail.com",
+        phone_number: 123456789,
+      };
+
+      localStorage.setItem("user", JSON.stringify(data));
+
+      let getData = JSON.parse(localStorage.getItem("user"));
+
+      container.innerHTML = `
+      <h1>Name - ${getData.name}</h1>
+      <h3>Email - ${getData.email}</h3>
+      <h3>Phone - ${getData.phone_number}</h3>
+      `;
+    </script>
+  </body>
+</html>
