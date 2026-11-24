@@ -3,7 +3,7 @@
 
 const firstNumber = 5;
 const secondNumber = 15;
-const thirdNumber = 10;
+const thirdNumber = 30;
 
 if (firstNumber > secondNumber) {
   if (firstNumber > thirdNumber) {
@@ -12,5 +12,9 @@ if (firstNumber > secondNumber) {
     console.log("Largest Number - ", thirdNumber);
   }
 } else {
-  console.log("Largest Number - ", secondNumber);
+  if (secondNumber > thirdNumber) {
+    console.log("Largest Number - ", secondNumber);
+  } else {
+    console.log("Largest Number - ", thirdNumber);
+  }
 }
