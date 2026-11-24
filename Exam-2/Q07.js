@@ -3,9 +3,8 @@ Q7. Traffic Signal System: Use switch-case for red (Stop), yellow (Get Ready), g
 */
 
 const trafficSignalSystem = (signal) => {
-  signal = signal.toString().toUpperCase();
   let display = "";
-  switch (signal) {
+  switch (signal.toUpperCase()) {
     case "RED":
       display = "STOP";
       break;
